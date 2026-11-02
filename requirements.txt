@@ -1,0 +1,36 @@
+# 核心框架
+deepagents>=0.6.6
+langchain>=0.3
+langchain-openai>=0.3
+langchain-core>=0.3
+langgraph>=0.4
+
+# Web 服务
+fastapi>=0.115
+uvicorn[standard]>=0.30
+python-multipart>=0.0.9
+
+# LLM / 搜索
+python-dotenv>=1.0
+tavily-python>=0.7
+
+# MCP 支持（未安装时 MCP 子智能体自动跳过）
+mcp>=1.9
+langchain-mcp-adapters>=0.1
+
+# 文件处理
+markdown>=3.7
+pypdf>=5.0
+python-docx>=1.1
+pandas>=2.2
+openpyxl>=3.1
+aiofiles>=24.1
+PyYAML>=6.0
+
+# 工具
+colorlog>=6.8
+pydantic>=2.7
+
+# 开发/测试
+pytest>=8.0
+pytest-asyncio>=0.24

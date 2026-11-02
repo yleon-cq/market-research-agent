@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+
+# 环境与密钥
+.env
+
+# 运行产物
+output/
+upload/
+!output/.gitkeep
+!upload/.gitkeep
+
+# IDE / 系统
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# 前端（如后续引入）
+node_modules/
