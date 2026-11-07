@@ -1,0 +1,3 @@
+{"id": "E1", "query": "调研智能音箱行业的竞品格局，结合我们的销售数据出一份调研报告", "expected_dimensions": ["database", "knowledge", "network"], "expect_file": true, "note": "全链路主场景：内部数据 + 内部文档 + 公开信息"}
+{"id": "E2", "query": "我们和声浪科技这个月的销售差距有多大？主要原因是什么？", "expected_dimensions": ["database", "knowledge"], "expect_file": true, "note": "内部数据 + 内部结论，不强制联网"}
+{"id": "E3", "query": "最近竞品和行业层面有什么值得关注的动态？", "expected_dimensions": ["network", "mcp"], "expect_file": false, "note": "纯外部情报场景（mock 轨迹下 MCP 维度按启用情况计）"}
