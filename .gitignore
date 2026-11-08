@@ -10,9 +10,9 @@ venv/
 .env
 
 # 运行产物
-output/
-upload/
+output/*
 !output/.gitkeep
+upload/*
 !upload/.gitkeep
 
 # IDE / 系统
