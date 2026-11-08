@@ -1,0 +1,21 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      # 单测只覆盖纯 Python 模块（路径安全 / SQL 拦截 / 评测指标），
+      # 不安装 deepagents 等重依赖，保证 CI 快速稳定
+      - name: Install minimal deps
+        run: pip install pytest python-dotenv pyyaml
+      - name: Run unit tests
+        run: pytest tests/ -v
