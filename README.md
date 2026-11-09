@@ -2,7 +2,7 @@
 
 **行业竞品调研多智能体系统** —— 基于 DeepAgents 的「1 主 + 4 专」架构，融合 MCP 协议、可回归评测与防失控设计，输入一句调研问题，产出结合内部数据与外部情报的分析报告。
 
-![CI](https://github.com/YOUR_USERNAME/market-research-agent/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/yleon-cq/market-research-agent/actions/workflows/ci.yml/badge.svg)
 ![Python](https://img.shields.io/badge/Python-3.11+-blue)
 ![License](https://img.shields.io/badge/License-MIT-green)
 

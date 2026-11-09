@@ -45,9 +45,10 @@ async def run_mock_agent(session_dir: str, thread_id: str, user_message: str):
         yield {"type": "tool_call", "name": "list_sql_tables"}
 
         sales_sql = (
-            "SELECT product_name, SUM(quantity) AS total_qty, "
-            "SUM(quantity * unit_price) AS revenue "
-            "FROM sales_records GROUP BY product_name ORDER BY revenue DESC LIMIT 5"
+            "SELECT p.product_name, p.brand, SUM(s.quantity) AS total_qty, "
+            "ROUND(SUM(s.quantity * s.unit_price), 2) AS revenue "
+            "FROM sales_records s JOIN products p ON p.product_id = s.product_id "
+            "GROUP BY p.product_id ORDER BY revenue DESC LIMIT 5"
         )
         sales = _log_tool(recorder, "execute_sql_query", execute_sql_query.invoke({"sql": sales_sql}))
         yield {"type": "tool_call", "name": "execute_sql_query"}
